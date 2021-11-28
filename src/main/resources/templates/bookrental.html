@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Rent</title>
+</head>
+<body>
+<div align="center">
+<h3>
+Are you sure you want to rent this book?
+</h3>
+    <form action="#" th:action="@{/books/rent}" method="post" th:object="${book}" >
+        <input type="submit">
+    </form>
+    <br>
+    <a href="/books">no</a>
+</div>
+</body>
+</html>

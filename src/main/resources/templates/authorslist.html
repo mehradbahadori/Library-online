@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Show Authors List</title>
+</head>
+<body>
+<div align="center">
+    <h1> Here is a list of authors </h1>
+    <div th:each="author : ${authors}">
+        <p> [[${author.name}]] </p>
+        <a th:href="'/authors/' + ${author.id}"> show detail</a>
+    </div>
+</div>
+</body>
+</html>

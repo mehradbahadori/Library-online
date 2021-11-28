@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Book</title>
+</head>
+<body>
+<div align="center">
+    <div th:each="book : ${book}">
+        <p>id: [[${book.id}]] </p>
+        <p>name: [[${book.name}]] </p>
+
+        <div th:each="author : ${author}">
+
+            <a th:href="'/authors/' + ${author.id}"> author: [[${author.name}]]</a>
+        <div align="center">
+            <a href="rent">rent</a>   &nbsp;  <a href="/books">home</a>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>

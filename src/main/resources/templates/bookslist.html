@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title> Show Books List </title>
+</head>
+<body>
+<div align="center">
+    <h1>  Here is a list of Books </h1>
+    <div th:each="book : ${book}">
+        <p> [[${book.name}]] </p>
+        <a th:href="'/books/' + ${book.id}"> show detail</a>
+    </div>
+</div>
+</body>
+</html>
